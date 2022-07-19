@@ -26,6 +26,8 @@ header a {
   margin-right: 25px;
 }
 
+
+
 button {
   font-family: 'Raleway', sans—serif;
   font-size: 15px;
@@ -53,9 +55,15 @@ button {
   width: 500px;
 }
 
+@keyframes rotation{
+    transform: rotate(90deg)
+}
+
 .about__sun-image {
   width: 100px;
   height: 100px;
+  animation: rotation 10s  linear infinite;
+
 }
 
 .about h1 {
