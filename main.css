@@ -9,6 +9,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: sticky;
+  color: white;
+  top: 0;
 }
 
 .header__logo {
@@ -63,7 +66,7 @@ button {
   width: 100px;
   height: 100px;
   animation: rotation 10s  linear infinite;
-
+  position: absolute.
 }
 
 .about h1 {
