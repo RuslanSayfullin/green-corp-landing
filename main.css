@@ -338,3 +338,7 @@ button:hover {
     padding: 50px 10px;
   }
 }
+
+.cards {
+     display: grid;
+}
