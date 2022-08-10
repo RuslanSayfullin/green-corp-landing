@@ -327,3 +327,14 @@ button:hover {
        flex-direction: column;
    }
 }
+
+.features {
+  background-color: #fff;
+  padding: 115px 60px;
+}
+
+@media (max-width: 720px) {
+  .features {
+    padding: 50px 10px;
+  }
+}
