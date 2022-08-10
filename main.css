@@ -388,3 +388,9 @@ button:hover {
   }
 }
 
+.features__border {
+  width: 100%;
+  border: 1px solid #E6EAF4;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
