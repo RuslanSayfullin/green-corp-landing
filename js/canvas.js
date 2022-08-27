@@ -40,15 +40,6 @@ class Bubble {
   }
 }
 
-const canvas = document.getElementById("orb-canvas");
-
-const bubbles = [];
-bubbles.push(new Bubble(canvas));
-bubbles.push(new Bubble(canvas));
-bubbles.push(new Bubble(canvas));
-
-console.log(bubbles);
-
 class CanvasBackground {
   constructor(id) {
     this.canvas = document.getElementById(id);
@@ -62,18 +53,15 @@ class CanvasBackground {
     this.generateBubbles();
     this.animate();
   }
+
   canvasSize() {
    this.canvas.width = this.canvas.offsetWidth * this.dpr;
    this.canvas.height = this.canvas.offsetHeight * this.dpr;
 
    this.ctx.scale(this.dpr, this.dpr);
    }
-   generateBubbles() {
-       this.bubblesList = [];
-       for (let i = 0; i < BUBBLE_DENSITY; i++) {
-       this.bubblesList.push(new Bubble(this.canvas))
-        }
-   }
+
+
    animate() {
    this.ctx.clearRect(0, 0, this.canvas.clientWidth,
    this.canvas.clientHeight);
@@ -86,9 +74,15 @@ class CanvasBackground {
        this.ctx.fillStyle = "rgba(" + bubble.color + "," + bubble.alpha + ")";
        this.ctx.fill();
        this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-       requestAnimationFrame(this.animate.bind(this));
        });
+       requestAnimationFrame(this.animate.bind(this));
     }
+    generateBubbles() {
+       this.bubblesList = [];
+       for (let i = 0; i < BUBBLE_DENSITY; i++) {
+       this.bubblesList.push(new Bubble(this.canvas))
+        }
+   }
 }
 
 const canvas = new CanvasBackground("orb-canvas");
