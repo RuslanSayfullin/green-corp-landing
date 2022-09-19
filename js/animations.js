@@ -17,6 +17,8 @@ document.querySelector('#budget').addEventListener('change', function handleSele
   document.querySelector('#form form').removeChild(otherInput); // Задание 4
   }
 });
+
+
 const INCREASE_NUMBER_ANIMATION_SPEED = 50;
 
 function increaseNumberAnimationStep (i, element, endNumber) {
