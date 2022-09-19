@@ -1,3 +1,9 @@
+document.querySelector('#budget').addEventListener('change', function handleSelectChange(event) {
+  console.log(event);
+});
+
+
+
 const INCREASE_NUMBER_ANIMATION_SPEED = 50;
 
 function increaseNumberAnimationStep (i, element, endNumber) {
